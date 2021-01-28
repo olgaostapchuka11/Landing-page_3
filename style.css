@@ -89,6 +89,7 @@ h6 {
 
 .cancel {
   display: none;
+  outline: none;
 }
 
 .dropdown {
@@ -97,7 +98,7 @@ h6 {
   right: 24px;
   padding: 10px 0;
   width: 30px;
-
+  outline: none;
   font-size: 0;
   color: transparent;
   border: 0;
@@ -328,10 +329,18 @@ h6 {
   text-decoration: none;
 }
 
+.text__link:hover{
+  color: #591664;
+}
+
 .icon {
   text-align: center;
   padding-right: 29px;
   text-decoration: none;
+}
+
+.icon:hover {
+  opacity: 0.6;
 }
 
 .icons__block {
@@ -343,7 +352,6 @@ h6 {
 
 .form {
   width: 100%;
-  text-align: center;
   display: flex;
   flex-direction: column;
   padding-top: 185px;
@@ -371,14 +379,19 @@ h6 {
 
 /*  Input */
 
+.form-inp {
+  display: flex;
+}
+
 .input-name {
   position: relative;
   display: inline-block;
   font-size: 14px;
   line-height: 16.41px;
   font-weight: 400;
-  padding: 12px;
+  padding: 12px 12px 12px 0;
   margin-bottom: 39px;
+  width: 100%;
 }
 
 .input-name2 {
@@ -462,7 +475,7 @@ textarea {
   height: 92px;
   color: #52166b;
   line-height: 16.41px;
-  padding: 18px 13px 18px 13px;
+  padding: 18px 13px 18px 0;
 }
 
 textarea:focus {
@@ -584,6 +597,21 @@ footer {
     font-size: 16px;
   }
 
+  .dark {
+    display: none;
+  }
+
+  .dark.open {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
   /*  About */
   .about {
     padding-bottom: 141px;
@@ -601,7 +629,7 @@ footer {
 
   /*  Team */
   .team__main-title {
-    padding-top: 100px;
+    padding-top: 34px;
   }
 
   .team__item {
@@ -613,7 +641,7 @@ footer {
 
   .form {
     max-width: 716px;
-    padding: 165px 26px 82px 26px;
+    padding: 141px 26px 82px 26px;
   }
 
   .input-name {
@@ -640,7 +668,6 @@ footer {
   .footer-text {
     margin-right: 0;
   }
-}
 
 @media only screen and (max-width: 640px) {
   /*  Header */
@@ -662,6 +689,7 @@ footer {
     z-index: 1;
     top: 0;
     background: rgba(0, 0, 0, 0.9);
+    z-index: 2;
   }
 
   .nav-open {
@@ -671,8 +699,9 @@ footer {
   }
 
   .nav-open a {
-    padding: 10px;
     text-align: center;
+    padding: 15px;
+    font-size: 30px;
   }
 
   .nav-open .components,
@@ -682,6 +711,11 @@ footer {
 
   .components {
     margin-right: 0;
+  }
+
+  .download-icon {
+    height: 25px;
+    vertical-align: middle;
   }
 
   nav.active {
@@ -695,7 +729,7 @@ footer {
   .cancel {
     display: block;
     position: absolute;
-    top: 24px;
+    top: 14px;
     right: 24px;
     padding: 10px 0;
     width: 30px;
@@ -711,5 +745,9 @@ footer {
 
   .cancel svg:hover {
     opacity: 0.6;
+  }
+
+  .footer__inner {
+    justify-content: center;
   }
 }
